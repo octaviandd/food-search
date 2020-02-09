@@ -1,0 +1,16 @@
+/** @format */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.single {
+  border: 1px solid black;
+}
+
+.single-span {
+  float: right;
+  padding-left: 10px;
+}
