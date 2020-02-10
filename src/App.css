@@ -17,6 +17,7 @@ body {
 .navbar {
   position: fixed;
   top: 35%;
+  z-index: 1;
 }
 
 .icon-bar {
@@ -58,14 +59,6 @@ body {
 }
 
 /*NAVBAR*/
-
-/*FOOD SEARCH PAGE*/
-
-.food-search-container {
-  margin: 0 100px;
-}
-
-/*FOOD SEARCH PAGE*/
 
 /* MACRO CALCULATOR PAGE */
 
@@ -173,17 +166,72 @@ body {
 
 /*MACRO CALCULATOR PAGE*/
 
+/*Food search page */
+
+.food-search-container {
+  margin: 5rem 6rem;
+}
+
 .branded-search-container {
   display: flex;
+  margin-left: 50px;
+}
+
+.branded-search-container input[type="text"] {
+  height: 50px;
+  width: 500px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 22px;
+  padding: 12px 24px;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 50px;
+  border: 1px solid #23ce6b;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.branded-search-container input[type="text"]::placeholder {
+  color: color#575756;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.branded-search-container input[type="text"]:hover:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #23ce6b;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.search-button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  color: #575756;
+  border: 1px solid #23ce6b;
+}
+
+.branded-search-container input[type="text"]:hover:focus + .search-button {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #23ce6b;
+  border-radius: 0;
+  color: red;
+  background-position: 100% center;
+  transition: all 250ms ease-in-out;
 }
 
 .branded-food-title {
   margin-left: 100px;
-}
-
-.tables-container {
-  display: flex;
-  justify-content: space-around;
+  color: #23ce6b;
+  margin-bottom: 50px;
 }
 
 .single {
@@ -216,3 +264,39 @@ body {
 .data-table {
   border-collapse: collapse;
 }
+
+.nutrition-data {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*Food search page */
+
+/* Recipes page */
+
+.recipes-searchbar form {
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 20%;
+}
+
+.recipes-searchbar input {
+  border: solid 3px #fff;
+  box-sizing: border-box;
+  font-size: 2em;
+  height: 2em;
+  margin-left: -15vw;
+  outline: solid #fc0 0;
+  padding: 0.5em;
+  transition: all 2s ease-in;
+  width: 30vw;
+  z-index: 1;
+}
+
+.recipes-searchbar input:focus {
+  border: solid 3px #09f;
+  outline: solid #fc0 2000px;
+}
+
+/* Recipes page */

@@ -53,19 +53,23 @@ export default function Dropdownbranded({ thumbnail, id, name, calories }) {
       <div className="item-container">
         <span className="item-title">{name}</span>
         <div className="section">
-          <span onClick={e => changeHeight(e)}>{Math.floor(calories)}Kcal</span>
+          <span onClick={e => changeHeight(e)}>
+            100g /{Math.floor(calories)}Kcal
+          </span>
           <img src={thumbnail} alt="thumb" height="25px" width="25px"></img>
         </div>
       </div>
       {!isLoading ? (
         isShowing ? (
           <Show>
-            <span>{nutritionData.nf_cholesterol}</span>
-            <span>{nutritionData.nf_protein}</span>
-            <span>{nutritionData.nf_total_fat}</span>
-            <span>{nutritionData.nf_total_carbohydrate}</span>
-            <span>{nutritionData.serving_weight_grams}</span>
-            <span>{nutritionData.serving_unit}</span>
+            <div className="nutrition-data">
+              <span>{nutritionData.nf_cholesterol}</span>
+              <span>{nutritionData.nf_protein}</span>
+              <span>{nutritionData.nf_total_fat}</span>
+              <span>{nutritionData.nf_total_carbohydrate}</span>
+              <span>{nutritionData.serving_weight_grams}</span>
+              <span>{nutritionData.serving_unit}</span>
+            </div>
           </Show>
         ) : (
           <DontShow>

@@ -15,7 +15,7 @@ export default function Navbar() {
           <i className="fas fa-calculator"></i>
         </Link>
 
-        <Link to="/receipes">
+        <Link to="/recipes">
           <i className="fas fa-pizza-slice"></i>
         </Link>
       </div>

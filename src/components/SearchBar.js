@@ -33,11 +33,14 @@ export default class SearchBar extends React.Component {
     return (
       <div className="branded-search-container">
         <input
+          type="text"
           onChange={this.checkInput}
           value={this.state.input}
           placeholder="Search products.."
         ></input>
-        <button onClick={this.newSearch}>Submit</button>
+        <button className="search-button" onClick={this.newSearch}>
+          <i className="fas fa-search"></i>
+        </button>
       </div>
     );
   }
