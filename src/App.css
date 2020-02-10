@@ -4,13 +4,215 @@
   border: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  outline: none;
+}
+
+body {
+  background-color: #003366;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  top: 35%;
+}
+
+.icon-bar {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+.navbar i {
+  color: white;
+  font-size: 36px;
+  float: left;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease-in-out;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 56px;
+  height: 60px;
+}
+
+.icon-bar :nth-child(1) {
+  background-color: red;
+}
+
+.navbar i:hover {
+  background-color: #000;
+}
+
+.navbar i:active {
+  background-color: #ff5733;
+  color: #ff5733;
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/*NAVBAR*/
+
+/*FOOD SEARCH PAGE*/
+
+.food-search-container {
+  margin: 0 100px;
+}
+
+/*FOOD SEARCH PAGE*/
+
+/* MACRO CALCULATOR PAGE */
+
+.macro-container {
+  margin: 50px 175px;
+
+  color: white;
+}
+
+.macro-title {
+  width: 100%;
+  background-color: #003366;
+}
+
+.macro-description {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #003366;
+}
+
+.macro-calculator {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #003366;
+  margin-top: 50px;
+}
+
+.acolade {
+  font-size: 330px;
+}
+
+.macro-calculator-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.macro-calculator-calculator label {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.macro-calculator-calculator input {
+  width: 300px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.carbs,
+.protein,
+.fat {
+  display: flex;
+  flex-direction: column;
+}
+
+.macro-nutrients p {
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.macro-details {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.macro-details h3 {
+  margin-right: 3rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding-bottom: 2rem;
+}
+
+.macro-macronutrients {
+  margin: 2rem 0;
+  border-bottom: 5px solid white;
+}
+
+.macro-details-box {
+  background-color: white;
+  color: black;
+  letter-spacing: 0.5px;
+  height: 275px;
+}
+
+.macro-details-box div {
+  padding: 1.5rem 2rem;
+}
+
+.macro-details-box p {
+  margin: 1.5rem 0;
+}
+
+.macro-details-box ul {
+  margin: 0 3rem;
+}
+
+.h3-border {
+  border-bottom: 5px solid red;
+}
+
+/*MACRO CALCULATOR PAGE*/
+
+.branded-search-container {
+  display: flex;
+}
+
+.branded-food-title {
+  margin-left: 100px;
+}
+
+.tables-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .single {
   border: 1px solid black;
+  width: 675px;
 }
 
 .single-span {
   float: right;
   padding-left: 10px;
+}
+
+.section {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.section img {
+  margin-right: 5px;
+}
+.section span {
+  margin-right: 5px;
+}
+
+.item-title {
+  margin-left: 5px;
+}
+
+.data-table {
+  border-collapse: collapse;
 }

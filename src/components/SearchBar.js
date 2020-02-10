@@ -28,11 +28,16 @@ export default class SearchBar extends React.Component {
       input: ""
     });
   }
+
   render() {
     return (
-      <div>
-        <input onChange={this.checkInput} value={this.state.input}></input>
-        <button onClick={e => this.newSearch(e)}>Submit</button>
+      <div className="branded-search-container">
+        <input
+          onChange={this.checkInput}
+          value={this.state.input}
+          placeholder="Search products.."
+        ></input>
+        <button onClick={this.newSearch}>Submit</button>
       </div>
     );
   }

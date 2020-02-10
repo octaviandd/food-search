@@ -28,21 +28,22 @@ export default function Dropdown({ branded_data, common_data }) {
           name={item.brand_name_item_name}
           calories={item.nf_calories}
           thumbnail={item.photo.thumb}
+          id={item.nix_item_id}
         />
       </tr>
     );
   });
 
   return (
-    <div>
-      <table cellSpacing="0">
+    <div className="tables-container">
+      <table className="data-table" style={{ color: "white" }}>
         <thead>
           <tr></tr>
         </thead>
         <tbody>{branded_food_data}</tbody>
       </table>
       <br></br>
-      <table cellSpacing="0">
+      <table className="data-table">
         <thead>
           <tr></tr>
         </thead>
