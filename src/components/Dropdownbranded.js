@@ -49,10 +49,13 @@ export default function Dropdownbranded({ thumbnail, id, name, calories }) {
   };
 
   return (
-    <td className="single" onClick={getOnClick}>
+    <td className="single">
       <div className="item-container">
         <span className="item-title">{name}</span>
         <div className="section">
+          <span className="info-button" onClick={getOnClick}>
+            <i className="fas fa-info-circle"></i>
+          </span>
           <span onClick={e => changeHeight(e)}>
             100g /{Math.floor(calories)}Kcal
           </span>
@@ -63,11 +66,17 @@ export default function Dropdownbranded({ thumbnail, id, name, calories }) {
         isShowing ? (
           <Show>
             <div className="nutrition-data">
-              <span>{nutritionData.nf_cholesterol}</span>
-              <span>{nutritionData.nf_protein}</span>
-              <span>{nutritionData.nf_total_fat}</span>
-              <span>{nutritionData.nf_total_carbohydrate}</span>
-              <span>{nutritionData.serving_weight_grams}</span>
+              <label>Cholesterol:</label>
+              <span>{nutritionData.nf_cholesterol}g</span>
+              <label>Protein:</label>
+              <span>{nutritionData.nf_protein}g</span>
+              <label>Fats:</label>
+              <span>{nutritionData.nf_total_fat}g</span>
+              <label>Carbohydrates:</label>
+              <span>{nutritionData.nf_total_carbohydrate}g</span>
+              <label>Weight:</label>
+              <span>{nutritionData.serving_weight_grams}g</span>
+              <label>Unit:</label>
               <span>{nutritionData.serving_unit}</span>
             </div>
           </Show>

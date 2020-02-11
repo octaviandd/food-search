@@ -36,7 +36,7 @@ export default function Dropdown({ branded_data, common_data }) {
 
   return (
     <div className="tables-container">
-      <table className="data-table" style={{ color: "white" }}>
+      <table className="data-table">
         <thead>
           <tr></tr>
         </thead>

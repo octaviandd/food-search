@@ -3,5 +3,5 @@
 import React from "react";
 
 export default function Loading() {
-  return <div>HELLO</div>;
+  return <div className="loader">Loading...</div>;
 }

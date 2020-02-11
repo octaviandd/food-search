@@ -60,7 +60,11 @@ export default class FoodSearch extends Component {
 
     return (
       <div className="food-search-container">
-        <h1 className="branded-food-title">Branded Food</h1>
+        <div className="food-search-titles">
+          <h1 className="branded-food-title">Branded Food</h1>
+          <h1 className="branded-food-title">Common Food</h1>
+        </div>
+
         <SearchBar changeActive={this.changeActive} />
         <Dropdown
           branded_data={this.state.data.branded}
