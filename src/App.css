@@ -359,7 +359,8 @@ body {
 }
 
 .food-search-container {
-  margin: 5rem 6rem;
+  margin-top: 5rem;
+  margin-left: 4rem;
 }
 
 .branded-search-container {
@@ -463,6 +464,7 @@ body {
 
 .data-table {
   border-collapse: collapse;
+  width: 675px;
   color: white;
 }
 
