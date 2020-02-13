@@ -4,7 +4,6 @@ import React from "react";
 
 export default function MacroResults(props) {
   const sum = props.carbs * 4 + props.protein * 4 + props.fat * 9;
-  console.log(props.carbs.length);
 
   return (
     <React.Fragment>

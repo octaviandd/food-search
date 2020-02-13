@@ -495,7 +495,7 @@ body {
 
 /* Recipes page */
 
-.recipes-searchbar form {
+.recipes-searchbar div {
   display: block;
   left: 50%;
   position: absolute;

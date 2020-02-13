@@ -2,6 +2,7 @@
 
 import React from "react";
 import recipesRequest from "../RecipesAPI";
+import RecipesSearchBar from "../components/RecipesSearchBar";
 
 export default class Recipes extends React.Component {
   constructor(props) {
@@ -9,14 +10,27 @@ export default class Recipes extends React.Component {
 
     this.state = {
       recipes: [],
-      search: "",
+      search: "chicken",
       loading: false
     };
-    this.handleInput = this.handleInput.bind(this);
+    this.getRecipes = this.getRecipes.bind(this);
+    this.changeActive = this.changeActive.bind(this);
   }
 
   componentDidMount() {
     this.getRecipes(this.state.search);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.search !== this.state.search) {
+      this.getRecipes(this.state.search);
+    }
+  }
+
+  changeActive(newSearch) {
+    this.setState({
+      search: newSearch
+    });
   }
 
   getRecipes = async e => {
@@ -33,22 +47,11 @@ export default class Recipes extends React.Component {
     });
   };
 
-  handleInput = e => {
-    this.setState({ search: e.target.value });
-    console.log(this.state.search);
-  };
-
   render() {
     return (
-      <div className="recipes-searchbar">
-        <form>
-          <input
-            type="search"
-            placeholder="Search recipes..."
-            onChange={this.handleInput}
-          ></input>
-        </form>
-      </div>
+      <React.Fragment>
+        <RecipesSearchBar changeActive={this.changeActive} />
+      </React.Fragment>
     );
   }
 }

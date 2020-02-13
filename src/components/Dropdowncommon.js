@@ -21,7 +21,6 @@ export default function Dropdowncommon({ name, thumbnail, serving }) {
   const getOnClick = async () => {
     await nutritionRequest(name).then(response => {
       let items = response.foods;
-      console.log(items[0]);
 
       const {
         nf_calories,
