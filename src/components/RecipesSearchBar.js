@@ -20,18 +20,17 @@ export default class RecipesSearchBar extends React.Component {
     this.setState({
       input: value
     });
-    console.log(this.state.input);
   }
 
   handleKeyDown = e => {
     if (e.key === "Enter") {
-      this.newSearch();
+      console.log(e.key);
+      let choice = this.state.input;
+      this.newSearch(choice);
     }
   };
 
-  newSearch() {
-    let choice = this.state.input;
-    console.log(choice);
+  newSearch(choice) {
     this.props.changeActive(choice);
     this.setState({
       input: ""

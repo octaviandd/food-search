@@ -517,7 +517,74 @@ body {
 
 .recipes-searchbar input:focus {
   border: solid 3px #09f;
-  outline: solid #fc0 2000px;
+  outline: solid #fc0 6000px;
 }
 
+.recipe-container {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -1%);
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  justify-items: center;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+}
+
+.recipe-article {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 500px;
+}
+
+.recipe-item {
+  color: white;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-item i {
+  cursor: pointer;
+}
+
+.recipe-info {
+  font-size: 16px;
+  color: red;
+  background-color: gray;
+  height: 100px;
+}
+
+.example-enter {
+  height: 0px;
+}
+
+.example-enter {
+  height: 100px;
+  transition: all 1s ease-in-out;
+  transform: scale(1.5);
+}
+.example-enter-active {
+  height: 100px;
+  transition: all 1s ease-in-out;
+}
+
+.example-leave {
+  height: 0px;
+  transition: all 1s ease-in-out;
+}
+
+.example-leave-active {
+  height: 0px;
+  transition: all 1s ease-in-out;
+}
 /* Recipes page */

@@ -22,8 +22,8 @@ export default class SearchBar extends React.Component {
   }
 
   newSearch() {
-    let movie = this.state.input;
-    this.props.changeActive(movie);
+    let food = this.state.input;
+    this.props.changeActive(food);
     this.setState({
       input: ""
     });

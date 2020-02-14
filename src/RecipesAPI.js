@@ -3,8 +3,8 @@
 const axios = require("axios");
 
 const recipesRequest = param => {
-  let api_key = "22fc1c61be0e6c110d102bfb3579025a";
-  let api_id = "f36dfa25";
+  let api_key = "65d4a64c86dc77d4623bdaf07be5df23";
+  let api_id = "7d8bd401";
 
   return axios
     .get(
