@@ -4,10 +4,8 @@ import React from "react";
 import recipesRequest from "../RecipesAPI";
 import RecipesSearchBar from "../components/RecipesSearchBar";
 import Loading from "../components/Loading";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../App.css";
-
-console.log(CSSTransition);
+import AnimateHeight from "react-animate-height";
 
 export default class Recipes extends React.Component {
   constructor(props) {
@@ -17,7 +15,7 @@ export default class Recipes extends React.Component {
       recipes: [],
       search: "chicken",
       loading: false,
-      isShowing: false
+      height: 0
     };
     this.getRecipes = this.getRecipes.bind(this);
     this.changeActive = this.changeActive.bind(this);
@@ -34,14 +32,9 @@ export default class Recipes extends React.Component {
   }
 
   changeActive(newSearch) {
-    console.log(newSearch);
-    console.log(this.state.search);
-
     this.setState({
       search: newSearch
     });
-
-    console.log(this.state.search);
   }
 
   getRecipes = async e => {
@@ -57,9 +50,9 @@ export default class Recipes extends React.Component {
     });
   };
 
-  handleShow = () => {
+  handleHeight = () => {
     this.setState({
-      isShowing: !this.state.isShowing
+      height: this.state.height === 0 ? "auto" : 0
     });
   };
 
@@ -71,6 +64,9 @@ export default class Recipes extends React.Component {
     const items = this.state.recipes.map(item => {
       return item.recipe;
     });
+
+    console.log(items);
+    const size = 3;
 
     return (
       <React.Fragment>
@@ -89,14 +85,40 @@ export default class Recipes extends React.Component {
                   {item.label}
                   <i
                     className="fas fa-info-circle"
-                    onClick={this.handleShow}
+                    onClick={this.handleHeight}
                   ></i>
                 </div>
-                {this.state.isShowing ? (
-                  <CSSTransition classNames="example">
-                    <div className="recipe-info">{item.calories}</div>
-                  </CSSTransition>
-                ) : null}
+                <AnimateHeight duration={500} height={this.state.height}>
+                  <div className="recipe-info">
+                    <div className="recipe-calories">
+                      {Math.floor(item.calories)} kcal
+                    </div>
+                    <div className="recipe-macros">
+                      {item.digest.slice(0, size).map((el, key) => {
+                        return (
+                          <React.Fragment key={key}>
+                            <div>
+                              <p>{el.label}</p>
+                              <p>
+                                {Math.floor(el.total)}
+                                {el.unit}
+                              </p>
+                            </div>
+                          </React.Fragment>
+                        );
+                      })}
+                    </div>
+                    <div className="recipe-ingredients">
+                      {item.ingredients.map((el, key) => {
+                        return (
+                          <ul key={key}>
+                            <li>{el.text}</li>
+                          </ul>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </AnimateHeight>
               </article>
             );
           })}

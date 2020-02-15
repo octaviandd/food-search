@@ -559,32 +559,36 @@ body {
 
 .recipe-info {
   font-size: 16px;
-  color: red;
-  background-color: gray;
-  height: 100px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
 }
 
-.example-enter {
-  height: 0px;
+.recipe-calories {
+  margin: 0 auto;
+  font-size: 18px;
 }
 
-.example-enter {
-  height: 100px;
-  transition: all 1s ease-in-out;
-  transform: scale(1.5);
-}
-.example-enter-active {
-  height: 100px;
-  transition: all 1s ease-in-out;
+.recipe-macros {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 22px;
 }
 
-.example-leave {
-  height: 0px;
-  transition: all 1s ease-in-out;
+.recipe-macros div p {
+  text-align: center;
 }
 
-.example-leave-active {
-  height: 0px;
-  transition: all 1s ease-in-out;
+.recipe-ingredients {
+  width: 80%;
+  margin: 0 auto;
 }
+
+.recipe-ingredients li {
+  line-height: 20px;
+}
+
 /* Recipes page */
