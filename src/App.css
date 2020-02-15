@@ -39,10 +39,6 @@ body {
   height: 60px;
 }
 
-.icon-bar :nth-child(1) {
-  background-color: red;
-}
-
 .navbar i:hover {
   background-color: #000;
 }
