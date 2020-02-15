@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="icon-bar">
-        <Link to="/food-search">
+        <Link to="/">
           <i className="fas fa-utensils"></i>
         </Link>
 

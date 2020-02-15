@@ -15,7 +15,7 @@ class App extends React.Component {
       <React.Fragment>
         <Navbar />
         <Switch>
-          <Route exact path="/food-search" component={FoodSearch}></Route>
+          <Route exact path="/" component={FoodSearch}></Route>
           <Route
             exact
             path="/macro-calculator"
